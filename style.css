@@ -33,6 +33,16 @@
     scroll-behavior: smooth;
 }
 
+/********** SCROLLBAR **********/
+::-webkit-scrollbar {
+    width: 12.5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: var(--main-color);
+}
+
 /********** GENERAL **********/
 body {
     font-family: "Roboto Regular", sans-serif;
@@ -47,6 +57,14 @@ a {
 h1 {
     font-family: "Roboto Black", sans-serif;
     text-transform: uppercase;
+}
+
+h2 {
+    display: none;
+}
+
+section {
+    height: 100vh;
 }
 
 /********** HEADER **********/
