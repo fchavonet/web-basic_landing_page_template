@@ -1,3 +1,26 @@
+/********** FONT IMPORT **********/
+@font-face {
+    font-family: "Roboto Thin";
+    src: url(./resources/fonts/roboto_thin.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url(./resources/fonts/roboto_regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Black";
+    src: url(./resources/fonts/roboto_black.ttf);
+}
+
+/********** VARIABLES **********/
+:root {
+    --main-color: rgb(62.5, 125, 250);
+    --subline-color: rgb(50, 100, 200);
+    --background-color: rgb(250, 250, 250);
+}
+
 /********** RESET CSS **********/
 *,
 *::before,
@@ -8,4 +31,79 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+}
+
+/********** GENERAL **********/
+body {
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 1rem;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--main-color);
+}
+
+h1 {
+    font-family: "Roboto Black", sans-serif;
+    text-transform: uppercase;
+}
+
+/********** HEADER **********/
+header {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(2.5px);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2.5px 5px 0 rgba(0, 0, 0, 0.25),
+                0 -2.5px 0 0 var(--background-color) inset;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transition: 0.25s ease;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul a {
+    text-transform: uppercase;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+nav button {
+    padding: 12.5px 25px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2.5px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+nav button:hover {
+    background-color: var(--subline-color);
+}
+
+nav button:active {
+    transform: scale(0.95);
 }
