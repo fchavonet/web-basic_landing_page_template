@@ -69,8 +69,10 @@ h3 {
     color: var(--main-color);
 }
 
-section {
-    height: 100vh;
+h4 {
+    font-family: "Roboto Black", sans-serif;
+    font-size: 1.5rem;
+    color: var(--main-color);
 }
 
 /********** HEADER **********/
@@ -190,7 +192,50 @@ nav button:active {
 
 /********** FEATURES SECTION **********/
 #features {
+    height: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
     background-color: white;
+}
+
+.feature {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.feature img {
+    width: 35%;
+}
+
+.feature_description {
+    width: 65%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12.5px;
+    text-align: center;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+#description {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12.5px;
+    text-align: center;
 }
 
 /********** FOOTER **********/
