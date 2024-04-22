@@ -24,3 +24,18 @@ moveToTopButton.addEventListener("click", (onclick) => {
     behavior: "smooth"
   });
 });
+
+
+////////// GALLERY BEHAVIOR \\\\\\\\\\
+document.addEventListener("DOMContentLoaded", function () {
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  const mainImage = document.getElementById("main_image");
+
+  // Update the main image when a thumbnail is clicked
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", function () {
+      const imageUrl = this.getAttribute("src");
+      mainImage.setAttribute("src", imageUrl);
+    });
+  });
+});

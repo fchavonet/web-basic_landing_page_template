@@ -63,6 +63,12 @@ h2 {
     display: none;
 }
 
+h3 {
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
 section {
     height: 100vh;
 }
@@ -123,6 +129,62 @@ nav button:hover {
 }
 
 nav button:active {
+    transform: scale(0.95);
+}
+
+/********** ABOUT SECTION **********/
+#about {
+    width: 100%;
+    height: 100vh;
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    text-align: center;
+}
+
+#gallery {
+    width: 75%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_image_container {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_image {
+    width: 100%;
+    border-radius: 2.5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+#thumbnails {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 70%;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.thumbnail:active {
     transform: scale(0.95);
 }
 
