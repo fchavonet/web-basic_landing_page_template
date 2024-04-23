@@ -1,6 +1,37 @@
 /*jshint esversion: 6 */
 
 
+////////// RESPONSIVE NAVIGATION BAR BEHAVIOR \\\\\\\\\\
+const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll(".nav_link");
+const hamburgerIcon = document.querySelector("#hamburger_icon");
+
+// Scroll to a specific section on the page
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// Toggle the navigation menu and hamburger icon's active state
+hamburgerIcon.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  hamburgerIcon.classList.toggle("active");
+});
+
+// Scroll to section and close the navigation menu when a nav link is clicked
+navLinks.forEach(link => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const sectionId = link.getAttribute('data-section-id');
+    scrollToSection(sectionId);
+    nav.classList.remove("active");
+    hamburgerIcon.classList.remove("active");
+  });
+});
+
+
 ////////// MOVE TO TOP BUTTON BEHAVIOR \\\\\\\\\\
 const moveToTopButton = document.querySelector("#move_to_top_button");
 
