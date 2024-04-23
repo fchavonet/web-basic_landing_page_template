@@ -70,3 +70,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+////////// GLOBAL ANIMATION BEHAVIOR \\\\\\\\\\
+// Observe elements and add or remove animation classes based on their visibility
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains("hidden")) {
+        entry.target.classList.add("show");
+      } else if (entry.target.classList.contains("hidden_top")) {
+        entry.target.classList.add("show_top");
+      } else if (entry.target.classList.contains("hidden_right")) {
+        entry.target.classList.add("show_right");
+      } else if (entry.target.classList.contains("hidden_bottom")) {
+        entry.target.classList.add("show_bottom");
+      } else if (entry.target.classList.contains("hidden_left")) {
+        entry.target.classList.add("show_left");
+      }
+    } else {
+      entry.target.classList.remove("show", "show_top", "show_right", "show_bottom", "show_left");
+    }
+  });
+});
+
+// Observe hidden elements to trigger animations when they become visible
+const hiddenElements = document.querySelectorAll(".hidden, .hidden_top, .hidden_right, .hidden_bottom, .hidden_left");
+hiddenElements.forEach((element) => observer.observe(element));
