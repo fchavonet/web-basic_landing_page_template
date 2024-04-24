@@ -1,6 +1,6 @@
 <img  height="50px" align="right" src="" alt="">
 
-# Web - Flip Book
+# Web - Basic Landing Page Template
 
 ## 🔖 Table of contents
 
@@ -43,7 +43,7 @@ Feel free to use this template however you like. Despite being a learner, I thin
 
 | FILE               | DESCRIPTION                                                   |
 | :----------------: | ------------------------------------------------------------- |
-| `resources`        | Contains the fonts and images required for the landing page.   |
+| `resources`        | Contains the fonts and images required for the landing page.  |
 | `README.md`        | The readme file you are currently reading ;).                 |
 | `behavior.js`      | JavaScript code for dynamic page interactions and animations. |
 | `index.html`       | Main HTML file for the landing page.                          |
@@ -73,7 +73,7 @@ To see the template in action, visit <a href="https://fchavonet.github.io/web-ba
 
 ## ♥️ <span id="thanks">Thanks</span>
 
-A big thank you to my friend Pierre and Yoann for taking time out of his busy schedule to test this little page.
+A big thank you to my friends Pierre and Yoann for taking time out of their busy schedule to test this template.
 
 ## 👷 <span id="authors">Authors</span>
 
