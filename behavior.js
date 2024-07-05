@@ -37,7 +37,7 @@ const moveToTopButton = document.querySelector("#move_to_top_button");
 
 // Show or hide the 'Move to Top' button based on scroll position
 window.addEventListener("scroll", () => {
-  let scrollPosition = window.screenY || document.documentElement.scrollTop;
+  let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollPosition > 250) {
     moveToTopButton.style.bottom = "50px";
